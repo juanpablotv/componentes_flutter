@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica_3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,34 +13,42 @@ class HomeScreen extends StatelessWidget {
         body: ListView(
           children: [ 
             ListTile(
-              leading: const Icon(Icons.input_rounded),
+              leading: const Icon(Icons.input_rounded, color: AppTheme.mainColor,
+              ),
               title: Text(
                 'Entradas',
               style:  Theme.of(context).textTheme.headlineLarge,
               ),
               subtitle: const Text('Diferentes widgets para entradas de flutter'),
 
-              trailing: const Icon(Icons.arrow_circle_right),
+              trailing: const Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
+              ),
 
             ),
             const Divider(),
             ListTile(
-              leading: const Icon(Icons.list_alt_rounded),
+              leading: const Icon(Icons.list_alt_rounded, color: AppTheme.mainColor,),
               title: Text(
               'ListView.builder',
               style: Theme.of(context).textTheme.headlineLarge,
               ),
               subtitle:const Text('14-02-2024 - Huamantla'),
-              trailing: const Icon(Icons.arrow_circle_right),
+              trailing: const Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
+              ),
 
             ),
             const Divider(),
             const  ListTile(
-              leading: Icon(Icons.notification_add),
-              title: Text('Notificaciones',
+              leading: Icon(Icons.notification_add, color: AppTheme.mainColor,
               ),
-              subtitle: Text('Creación de notificaciones'),
-              trailing: Icon(Icons.arrow_circle_right),
+              title: Text(
+                'Notificaciones',
+                
+              ),
+              subtitle: Text('Creación de notificaciones',
+              style: AppTheme.lightTheme.textTheme.bodySmall,),
+              trailing: Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
+              ),
 
             )
           ],
