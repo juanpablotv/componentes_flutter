@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practica_3/screens/infinite_list_screen.dart';
+import 'package:practica_3/screens/inputs_screen.dart';
 import 'package:practica_3/theme/app_theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -23,6 +25,12 @@ class HomeScreen extends StatelessWidget {
 
               trailing: const Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
               ),
+              onTap: () {
+                final ruta1 = MaterialPageRoute(builder: (context) {
+                  return const InputsScreen();
+                });
+                Navigator.push(context, ruta1);
+              },
 
             ),
             const Divider(),
@@ -35,6 +43,13 @@ class HomeScreen extends StatelessWidget {
               subtitle:const Text('14-02-2024 - Huamantla'),
               trailing: const Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
               ),
+              onTap: () {
+                final ruta1 = MaterialPageRoute(builder: (context) {
+                  return const InputsScreen();
+                });
+                Navigator.push(context, ruta1);
+              },
+             
 
             ),
             const Divider(),
@@ -43,13 +58,17 @@ class HomeScreen extends StatelessWidget {
               ),
               title: Text(
                 'Notificaciones',
-                
-              ),
-              subtitle: Text('Creación de notificaciones',
-              style: AppTheme.lightTheme.textTheme.bodySmall,),
+                ),
+              subtitle: Text('Creación de notificaciones'),
               trailing: Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
               ),
-
+              onTap: () {
+                final ruta1 = MaterialPageRoute(builder: (context) {
+                  return const InputsScreen();
+                });
+                Navigator.push(context, ruta1);
+              },
+             
             )
           ],
         )
