@@ -15,7 +15,9 @@ class HomeScreen extends StatelessWidget {
         body: ListView(
           children: [ 
             ListTile(
-              leading: const Icon(Icons.input_rounded, color: AppTheme.mainColor,
+              leading: const IconTheme(
+                data:AppThemelightTheme.IconTheme,
+                child: Icon(Icons.arrow_circle_right) ,
               ),
               title: Text(
                 'Entradas',
@@ -35,7 +37,9 @@ class HomeScreen extends StatelessWidget {
             ),
             const Divider(),
             ListTile(
-              leading: const Icon(Icons.list_alt_rounded, color: AppTheme.mainColor,),
+              leading: IconTheme(
+                data:AppThemelightTheme.IconTheme,
+                child: const Icon(Icons.arrow_circle_right),),
               title: Text(
               'ListView.builder',
               style: Theme.of(context).textTheme.headlineLarge,
@@ -44,17 +48,20 @@ class HomeScreen extends StatelessWidget {
               trailing: const Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
               ),
               onTap: () {
-                final ruta1 = MaterialPageRoute(builder: (context) {
+                final ruta2 = MaterialPageRoute(builder: (context) {
                   return const InputsScreen();
                 });
-                Navigator.push(context, ruta1);
+                Navigator.push(context, ruta2);
               },
-             
-
+            
             ),
             const Divider(),
             const  ListTile(
-              leading: Icon(Icons.notification_add, color: AppTheme.mainColor,
+              leading: IconTheme(
+                data: AppThemelightTheme.iconTheme,
+                child: const Icon(Icons.notification_add),),
+
+                Icons.notification_add, color: AppTheme.mainColor,
               ),
               title: Text(
                 'Notificaciones',
@@ -63,10 +70,10 @@ class HomeScreen extends StatelessWidget {
               trailing: Icon(Icons.arrow_circle_right, color: AppTheme.mainColor,
               ),
               onTap: () {
-                final ruta1 = MaterialPageRoute(builder: (context) {
+                final ruta3 = MaterialPageRoute(builder: (context) {
                   return const InputsScreen();
                 });
-                Navigator.push(context, ruta1);
+                Navigator.push(context, ruta3);
               },
              
             )

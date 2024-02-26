@@ -11,13 +11,15 @@ class InputsScreen extends StatefulWidget {
 class _InputsScreenState extends State<InputsScreen> {
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return  Scaffold(
+      appBar: (title: const Text('Entradas')),
+      body: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text('Entradas',
             style: AppTheme.lightTheme.textTheme.headlineLarge,  
-        
-        
+        ],
+         ),
         ),
           const Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -29,7 +31,6 @@ class _InputsScreenState extends State<InputsScreen> {
             ElevatedButton(
               onPressed: null ,
               child: Text('Ir a Data Screen',
-                style: AppTheme.lightTheme.textTheme.bodySmall,
               ),
             ),
           ],
