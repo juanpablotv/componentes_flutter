@@ -6,17 +6,18 @@ class AppTheme {
   static const mainColor = Color.fromARGB(255, 131, 131, 243); 
   static const backColor = Color.fromARGB(255, 155, 198, 238);
   static const accentColor = Color.fromARGB(255, 108, 146, 170);
-  static const bodyColor = Color.fromARGB(255, 170, 39, 187);
+  static const accentColor2 = Color.fromARGB(255, 170, 39, 187);
 
 
   static final ThemeData lightTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor:  backColor,
     appBarTheme: const AppBarTheme(
       color: mainColor,
-        titleTextStyle: GoogleFonts.lato(
+      titleTextStyle: GoogleFonts.lato(
           color: backColor,
           fontSize: 28.5,
           fontWeight: FontWeight.bold,
+          
           ),
         ),
     iconTheme: const IconThemeData(
@@ -49,7 +50,14 @@ class AppTheme {
         fontStyle: FontStyle.italic
         
       ),
-    ),
+      headlineMedium: GoogleFonts.acme(
+          color: mainColor,
+          fontSize: 22.0,
+          fontWeight: FontWeight.w500,
+          decorationStyle: TextDecorationStyle.double,
+          decorationThickness: 1.5,
+          ),
+      ),
     
   );
 }
