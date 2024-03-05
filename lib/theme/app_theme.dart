@@ -1,63 +1,68 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  static const mainColor = Color.fromARGB(255, 131, 131, 243); 
-  static const backColor = Color.fromARGB(255, 155, 198, 238);
-  static const accentColor = Color.fromARGB(255, 108, 146, 170);
-  static const accentColor2 = Color.fromARGB(255, 170, 39, 187);
+  //Aqui hago las declaraciones de los colores
+  static const mainColor = Color.fromARGB(255, 75, 79, 75);
+  static const backColor = Color.fromARGB(255, 183, 171, 243);
+  static const bodyColor = Color.fromARGB(255, 18, 173, 36);
+  static const accentColor = Color.fromARGB(255, 18, 173, 132);
 
-
+  //Aqui las declaraciones del tema
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    scaffoldBackgroundColor:  backColor,
-    appBarTheme: const AppBarTheme(
+    scaffoldBackgroundColor: backColor,
+    appBarTheme: AppBarTheme(
       color: mainColor,
       titleTextStyle: GoogleFonts.lato(
-          color: backColor,
-          fontSize: 28.5,
-          fontWeight: FontWeight.bold,
-          
-          ),
-        ),
+        color: backColor,
+        fontSize: 28.5,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
     iconTheme: const IconThemeData(
       color: accentColor,
-      size: 30.0,
-    ),  
+      size: 35.0,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(
           accentColor,
-          ),
+        ),
         foregroundColor: MaterialStateProperty.all(
           backColor,
-        ),  
+        ),
         textStyle: MaterialStateProperty.all(
-          GoogleFonts.pacifico(color:backColor),
-        ),  
+          GoogleFonts.pacifico(fontSize: 22.0),
+        ),
       ),
-      
     ),
-    textTheme:  TextTheme(
-      headlineLarge:  GoogleFonts.acme(
+    textTheme: TextTheme(
+      headlineLarge: GoogleFonts.montserrat(
         color: mainColor,
+        fontSize: 25.0,
+        fontWeight: FontWeight.w500,
+        //esto es para poner una linea debajo del texto
+        decoration: TextDecoration.underline,
+        //esto es para ponerle color a la linea
+        decorationColor: mainColor,
+        //esto es para agregar otras cosas a la linea
+        decorationStyle: TextDecorationStyle.dotted,
+        decorationThickness: 3.0,
+        fontStyle: FontStyle.italic,
+      ),
+      headlineMedium: GoogleFonts.montserrat(
+        color: mainColor,
+        //aqui es para cambiar el tamaño del nombre que se ingresa
         fontSize: 22.0,
         fontWeight: FontWeight.w500,
         decoration: TextDecoration.underline,
-        decorationColor: Colors.blue,
-        decorationStyle: TextDecorationStyle.wavy,
-        decorationThickness: 2.0,
-        fontStyle: FontStyle.italic
-        
+        decorationStyle: TextDecorationStyle.dotted,
+        decorationThickness: 1.5,
       ),
-      headlineMedium: GoogleFonts.acme(
-          color: mainColor,
-          fontSize: 22.0,
-          fontWeight: FontWeight.w500,
-          decorationStyle: TextDecorationStyle.double,
-          decorationThickness: 1.5,
-          ),
+      bodySmall: GoogleFonts.montserrat(
+        color: bodyColor,
+        decorationStyle: TextDecorationStyle.dashed,
       ),
-    
+    ),
   );
 }

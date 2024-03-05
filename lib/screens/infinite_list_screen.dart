@@ -10,8 +10,6 @@ class InfiniteListScreen extends StatefulWidget {
 class _InfiniteListScreenState extends State<InfiniteListScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Lista infinita')
-      ,);
+    return const Placeholder();
   }
 }
