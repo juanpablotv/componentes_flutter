@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
             subtitle: const Text('listas'),
             trailing: IconTheme(
               data: AppTheme.lightTheme.iconTheme,
-              child: const Icon(Icons.add_reaction_outlined),
+              child: const Icon(Icons.arrow_circle_right),
             ),
             onTap: () {
               final ruta2 = MaterialPageRoute(builder: (context) {
